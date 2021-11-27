@@ -1,0 +1,431 @@
+<!-- Created by Lê Anh Đức! - https://leanhduc.pro.vn/
+██╗░░░░░███████╗  ░█████╗░███╗░░██╗██╗░░██╗  ██████╗░██╗░░░██╗░█████╗░
+██║░░░░░██╔════╝  ██╔══██╗████╗░██║██║░░██║  ██╔══██╗██║░░░██║██╔══██╗
+██║░░░░░█████╗░░  ███████║██╔██╗██║███████║  ██║░░██║██║░░░██║██║░░╚═╝
+██║░░░░░██╔══╝░░  ██╔══██║██║╚████║██╔══██║  ██║░░██║██║░░░██║██║░░██╗
+███████╗███████╗  ██║░░██║██║░╚███║██║░░██║  ██████╔╝╚██████╔╝╚█████╔╝
+╚══════╝╚══════╝  ╚═╝░░╚═╝╚═╝░░╚══╝╚═╝░░╚═╝  ╚═════╝░░╚═════╝░░╚════╝░
+Copyright © 2021 Lê Anh Đức. All rights reserved. -->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <title>Công cụ tính điểm tốt nghiệp 2022</title>
+    <meta charset="UTF-8"/>
+    <meta content='width=device-width, initial-scale=1' name='viewport'/>
+    <link href='https://1.bp.blogspot.com/-Y9NRvh79RRM/YL9utTIaMwI/AAAAAAAAFs8/eRMXZ5JxG-IYAf50mav9S-nqwK4Gw3f8wCLcBGAsYHQ/s0/favicon-ad.png' rel='shortcut icon' type='image/x-icon'/>
+    <!-- meta tag for seo -->
+    <meta content='Thật dễ dàng để tính toán bạn đỗ hay trượt tốt nghiệp bằng công cụ đơn giản !' name='description'/>
+    <meta content='Thật dễ dàng để tính toán bạn đỗ hay trượt tốt nghiệp bằng công cụ đơn giản !' property='og:description'/>
+    <meta content='Thật dễ dàng để tính toán bạn đỗ hay trượt tốt nghiệp bằng công cụ đơn giản !' name='twitter:description'/>
+    <meta content='công cụ tính điểm tốt nghiệp, tính điểm tốt nghiệp online, tính điểm tốt nghiệp chuẩn, tính điểm thpt, tính điểm thi đại học, công cụ tính điểm thi đại học, tính điểm đại học, tính xuôi, tính ngược, tính điểm gdtx, tính điểm tốt nghiệp gdtx, tính điểm tốt nghiệp 2021, tính điểm 2021, tính điểm chuẩn 2021, tính điểm đại học 2021, dự đoán điểm, dự đoán điểm tốt nghiệp, cần bao nhiêu điểm để tốt nghiệp, bao điểm thì tốt nghiệp, điểm tốt nghiệp, xem điểm, tra cứu điểm thi, tính toán điểm thi, tính toán điểm tốt nghiệp, tính toán điểm chuẩn, công cụ tính điểm chuẩn, tool tính điểm, tool tính điểm chuẩn, tính đỗ trượt tốt nghiệp, tính đỗ trượt đại học' name='keywords'/>
+    <meta content='https://1.bp.blogspot.com/-eQTN7Rz4ZFY/YKCyYWXINzI/AAAAAAAAFWg/XA9xUNnVojwUxoVOKmX8jyu20gIWG20WwCLcBGAsYHQ/s16000/le-anh-duc-blog-website-chia-se-thu-thuat.jpeg' property='og:image'/>
+    <meta content='https://tools.leanhduc.pro.vn/tinh-diem-tot-nghiep' property='og:url'/>
+    <meta content='Công cụ tính điểm tốt nghiệp 2021' property='og:image:alt'/>
+    <meta content='Lê Anh Đức' name='Author'/>
+    <meta content='Lê Anh Đức' name='copyright'/>
+    <meta content='582762067' property='fb:admins'/>
+    <meta content='1380030040' property='fb:admins'/>
+    <meta content='100004108030415' property='fb:admins'/>
+    <meta content='101441278410901' property='fb:pages'/>
+    <link href="./style.css" rel="stylesheet"/>
+    <link href='https://fonts.googleapis.com/css?family=Dancing+Script|Lobster|Pattaya|Srisakdi&display=swap' rel='stylesheet'/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"/>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.leanhduc.pro.vn/js/mode/drop_heart.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- end google analytic -->
+</head>
+<body>
+    <!-- bắt đầu phần hiển thị -->
+    <br/>
+    <div class="container-fluid">
+        <div class="row content">
+            <!-- bắt đầu bên trái -->
+            <div class="col-sm-3 sidenav">
+                <!-- bắt đầu thông báo -->
+                <script language="JavaScript">
+                    function hideitem() {
+                        document.getElementById("thbao").style.display = "none";
+                    }
+                    CDATA
+                    thbao = new Array(3);
+                    thbao[0] = '{Bạn nào đậu nv1 đánh con lô 28, trượt thì con 9 nha}';
+                    thbao[1] = '{Đậu nv1 hết nha mấy idol}';
+                    thbao[2] = '{Chúc mn thi tốt nha}';
+                    thbao[3] = '{12B12 thi tốt nha UwU}';
+                    tbindex = Math.floor(Math.random() * thbao.length);
+                </script>
+                <div id="thbao">
+                    <div id="thbao-margin" class="thbao-container">
+                        <table cellspacing="0" cellpadding="0">
+                            <tbody>
+                                <tr>
+                                    <td class="thbao-header"><b><i class="fa fa-bell-o rung" aria-hidden="true" style="font-size: 25px"></i> Note nè</b>
+                                    </td>
+                                    <td class="thbao-body">
+                                        <a href="#" class="thbao-close" onclick="hideitem()"><i class="fa fa-times" aria-hidden="true"></i>
+                                        </a>
+                                        <span class="thbao-text" style="font-size: 25px">
+                                            <b style="color:#cf86ff">Nguyễn Khuyến - Lê Thánh Tông:</b> Nguyễn khuyến thì làm sao mà rớt tốt nghiệp được , nhưng dù sao cũng tính cho chắc ăn nha mấy bạn :))
+                                            <h1 style="color:#ff0000"font-size="10px"><script type="text/javascript">
+                                                document.write(thbao[tbindex]);
+                                            </script></h1>
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- kết thúc thông báo -->
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <center style="font-size: 30px"><i>Một số thông tin cần lưu ý</i></center>
+                    </div>
+                    <div class="panel-body">
+                        <b>Điểm khuyến khích là gì?</b>
+                        <br/>- Đạt giải cá nhân kỳ thi học sinh giỏi bộ môn văn hoá lớp 12...
+                        <br/>- Đoạt giải cá nhân và đồng đội trong các kỳ thi thí nghiệm thực hành...
+                        <br/>- Được cấp giấy chứng nhận nghề...
+                        <br/>- Nếu học viên GDTX có chứng chỉ Ngoại ngữ A hoặc Tin học A trở lên...
+                        <br/><i>(Điểm khuyến khích không vượt quá 4.0 điểm)</i>
+                        <br/>
+                        <br/><b>Điểm ưu tiên là gì?</b>
+                        <br/>- Diện 1: Không được cộng điểm ưu tiên
+                        <br/>- Diện 2: Cộng 0,25 điểm đối với thí sinh thuộc một trong những đối tượng...
+                        <br/>- Diện 3: Cộng 0,5 điểm đối với thí sinh thuộc một trong những đối tượng...
+                        <br/><i>(Học sinh có nhiều tiêu chuẩn ưu tiên thì chỉ hưởng theo tiêu chuẩn cao nhất)</i>
+                        <br/><br/>
+                    </div>
+                </div>
+            </div>
+            <!-- kết thúc bên trái -->
+            <!-- bắt đầu bên phải -->
+            <div class="col-sm-9">
+                <div class="panel panel-primary">
+                    <!-- menu -->
+                    <div class="panel-heading" style="font-size: 20px">Công cụ tính điểm tốt nghiệp 2021</div>
+                    <div class="panel-body">
+                        <ul class="nav nav-tabs" id="maincontent" role="tablist">
+                            <li class="active"><a href="#home" role="tab" data-toggle="tab">Tính xuôi</a>
+                            </li>
+                            <li><a href="#profile" role="tab" data-toggle="tab">Tính ngược</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown" style="font-size: 20px">GDTX <span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
+                                    <li style="font-size: 10px"><a href="#dropdown1" tabindex="-1" role="tab" data-toggle="tab">Tính xuôi</a>
+                                    </li>
+                                    <li style="font-size: 10px"><a href="#dropdown2" tabindex="-1" role="tab" data-toggle="tab">Tính ngược</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane fade in active" id="home">
+                                <br />
+                                <form class="form-horizontal">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="input-group"> <span class="input-group-addon">Toán</span>
+                                                <input id="diemtoan" type="number" class="form-control" name="diemtoan" placeholder="Điểm môn toán">
+                                            </div>
+                                            <br />
+                                            <div class="input-group"> <span class="input-group-addon">Văn</span>
+                                                <input id="diemvan" type="number" class="form-control" name="diemvan" placeholder="Điểm môn văn">
+                                            </div>
+                                            <br />
+                                            <div class="input-group"> <span class="input-group-addon">Anh</span>
+                                                <input id="diemanh" type="number" class="form-control" name="diemanh" placeholder="Điểm môn anh">
+                                            </div>
+                                            <br />
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="input-group"> <span class="input-group-addon">TH1</span>
+                                                <input id="diemtohop1" type="number" class="form-control" name="diemtohop1" placeholder="Điểm môn tổ hợp 1">
+                                            </div>
+                                            <br />
+                                            <div class="input-group"> <span class="input-group-addon">TH2</span>
+                                                <input id="diemtohop2" type="number" class="form-control" name="diemtohop2" placeholder="Điểm môn tổ hợp 2">
+                                            </div>
+                                            <br />
+                                            <div class="input-group"> <span class="input-group-addon">TH3</span>
+                                                <input id="diemtohop3" type="number" class="form-control" name="diemtohop3" placeholder="Điểm môn tổ hợp 3">
+                                            </div>
+                                            <br />
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="input-group"> <span class="input-group-addon">TB</span>
+                                                <input id="diemtb" type="number" class="form-control" name="diemtb" placeholder="Điểm trung bình cả năm">
+                                            </div>
+                                            <br />
+                                            <div class="input-group"> <span class="input-group-addon">KK</span>
+                                                <input id="diemkk" type="number" class="form-control" name="diemkk" placeholder="Điểm khuyến khích">
+                                            </div>
+                                            <br />
+                                            <div class="input-group"> <span class="input-group-addon">ƯT</span>
+                                                <input id="diemut" type="number" class="form-control" name="diemut" placeholder="Điểm ưu tiên">
+                                            </div>
+                                            <br />
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn btn-success btn-block" onclick="tinhxuoii()" data-toggle="modal" data-target="#tinhxuoi0">Tính</button>
+                                </form>
+                            </div>
+                            <div class="tab-pane fade" id="profile">
+                                <br />
+                                <form>
+                                    <div class="input-group"> <span class="input-group-addon">TB</span>
+                                        <input id="diemtbn" type="number" class="form-control" name="diemtbn" placeholder="Điểm trung bình cả năm">
+                                    </div>
+                                    <br />
+                                    <div class="input-group"> <span class="input-group-addon">KK</span>
+                                        <input id="diemkkn" type="number" class="form-control" name="diemkkn" placeholder="Điểm khuyến khích">
+                                    </div>
+                                    <br />
+                                    <div class="input-group"> <span class="input-group-addon">ƯT</span>
+                                        <input id="diemutn" type="number" class="form-control" name="diemutn" placeholder="Điểm ưu tiên">
+                                    </div>
+                                    <br />
+                                    <button type="button" class="btn btn-success btn-block" onclick="tinhnguocc()" data-toggle="modal" data-target="#tinhnguoc0">Tính</button>
+                                </form>
+                            </div>
+                            <div class="tab-pane fade" id="dropdown1">
+                                <br />
+                                <form>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="input-group"> <span class="input-group-addon">BT1</span>
+                                                <input id="diemtoangdtx" type="number" class="form-control" name="diemtoangdtx" placeholder="Điểm bài thi 1">
+                                            </div>
+                                            <br />
+                                            <div class="input-group"> <span class="input-group-addon">BT2</span>
+                                                <input id="diemvangdtx" type="number" class="form-control" name="diemvangdtx" placeholder="Điểm bài thi 2">
+                                            </div>
+                                            <br />
+                                            <div class="input-group"> <span class="input-group-addon">BT3</span>
+                                                <input id="diemanhgdtx" type="number" class="form-control" name="diemanhgdtx" placeholder="Điểm bài thi 3">
+                                            </div>
+                                            <br />
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="input-group"> <span class="input-group-addon">TB</span>
+                                                <input id="diemtbgdtx" type="number" class="form-control" name="diemtbgdtx" placeholder="Điểm trung bình cả năm">
+                                            </div>
+                                            <br />
+                                            <div class="input-group"> <span class="input-group-addon">KK</span>
+                                                <input id="diemkkgdtx" type="number" class="form-control" name="diemkkgdtx" placeholder="Điểm khuyến khích">
+                                            </div>
+                                            <br />
+                                            <div class="input-group"> <span class="input-group-addon">ƯT</span>
+                                                <input id="diemutgdtx" type="number" class="form-control" name="diemutgdtx" placeholder="Điểm ưu tiên">
+                                            </div>
+                                            <br />
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn btn-success btn-block" onclick="tinhxuoiigdtx()" data-toggle="modal" data-target="#tinhxuoi0gdtx">Tính</button>
+                                </form>
+                            </div>
+                            <div class="tab-pane fade" id="dropdown2">
+                                <br />
+                                <form>
+                                    <div class="input-group"> <span class="input-group-addon">TB</span>
+                                        <input id="diemtbngdtx" type="number" class="form-control" name="diemtbngdtx" placeholder="Điểm trung bình cả năm">
+                                    </div>
+                                    <br />
+                                    <div class="input-group"> <span class="input-group-addon">KK</span>
+                                        <input id="diemkkngdtx" type="number" class="form-control" name="diemkkngdtx" placeholder="Điểm khuyến khích">
+                                    </div>
+                                    <br />
+                                    <div class="input-group"> <span class="input-group-addon">ƯT</span>
+                                        <input id="diemutngdtx" type="number" class="form-control" name="diemutngdtx" placeholder="Điểm ưu tiên">
+                                    </div>
+                                    <br />
+                                    <button type="button" class="btn btn-success btn-block" onclick="tinhnguoccgdtx()" data-toggle="modal" data-target="#tinhnguoc0gdtx">Tính</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end menu -->
+                <!-- bắt đầu tính xuôi -->
+                <div class="modal fade" id="tinhxuoi0" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal"></button>
+                                <h4 class="modal-title">Kết quả</h4>
+                            </div>
+                            <div class="modal-body">
+                                <span id="tinhxuoi"></span>
+                                <br /> <span id="tinhxuoi2"></span>
+                                <script type="text/javascript">
+                                    var _0x72d8 = ["\x76\x61\x6C\x75\x65", "\x64\x69\x65\x6D\x74\x6F\x61\x6E", "\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64", "\x64\x69\x65\x6D\x76\x61\x6E", "\x64\x69\x65\x6D\x61\x6E\x68", "\x64\x69\x65\x6D\x74\x6F\x68\x6F\x70\x31", "\x64\x69\x65\x6D\x74\x6F\x68\x6F\x70\x32", "\x64\x69\x65\x6D\x74\x6F\x68\x6F\x70\x33", "\x64\x69\x65\x6D\x74\x62", "\x64\x69\x65\x6D\x6B\x6B", "\x64\x69\x65\x6D\x75\x74", "\x69\x6E\x6E\x65\x72\x48\x54\x4D\x4C", "\x74\x69\x6E\x68\x78\x75\x6F\x69", "\x42\u1EA1\x6E\x20\u0111\xE3\x20\x74\x72\u01B0\u1EE3\x74\x20\x74\u1ED1\x74\x20\x6E\x67\x68\x69\u1EC7\x70\x20\x64\x6F\x20\x63\xF3\x20\x31\x20\x6D\xF4\x6E\x20\x64\u01B0\u1EDB\x69\x20\x68\x6F\u1EB7\x63\x20\x62\u1EB1\x6E\x67\x20\x31\x21", "\x74\x6F\x46\x69\x78\x65\x64", "\u0110\x69\u1EC3\x6D\x20\x78\xE9\x74\x20\x74\u1ED1\x74\x20\x6E\x67\x68\x69\u1EC7\x70\x20\x63\u1EE7\x61\x20\x62\u1EA1\x6E\x20\x6C\xE0\x3A\x20", "\x74\x69\x6E\x68\x78\x75\x6F\x69\x32", "\x42\u1EA1\x6E\x20\u0111\xE3\x20\x74\x72\u01B0\u1EE3\x74\x20\x74\u1ED1\x74\x20\x6E\x67\x68\x69\u1EC7\x70\x21\x3C\x62\x72\x2F\x3E\x42\u1EA1\x6E\x20\x63\u1EA7\x6E\x20\xED\x74\x20\x6E\x68\u1EA5\x74\x20", "\x20\u0111\x69\u1EC3\x6D\x20\x6E\u1EEF\x61\x20\u0111\u1EC3\x20\u0111\u1ED7\x20\x74\u1ED1\x74\x20\x6E\x67\x68\x69\u1EC7\x70", "\x42\u1EA1\x6E\x20\u0111\xE3\x20\u0111\u1ED7\x20\x74\u1ED1\x74\x20\x6E\x67\x68\x69\u1EC7\x70\x21"];
+
+                                    function tinhxuoii() {
+                                        var _0xf943x2 = document[_0x72d8[2]](_0x72d8[1])[_0x72d8[0]];
+                                        var _0xf943x3 = document[_0x72d8[2]](_0x72d8[3])[_0x72d8[0]];
+                                        var _0xf943x4 = document[_0x72d8[2]](_0x72d8[4])[_0x72d8[0]];
+                                        var _0xf943x5 = document[_0x72d8[2]](_0x72d8[5])[_0x72d8[0]];
+                                        var _0xf943x6 = document[_0x72d8[2]](_0x72d8[6])[_0x72d8[0]];
+                                        var _0xf943x7 = document[_0x72d8[2]](_0x72d8[7])[_0x72d8[0]];
+                                        var _0xf943x8 = document[_0x72d8[2]](_0x72d8[8])[_0x72d8[0]];
+                                        var _0xf943x9 = document[_0x72d8[2]](_0x72d8[9])[_0x72d8[0]];
+                                        var _0xf943xa = document[_0x72d8[2]](_0x72d8[10])[_0x72d8[0]];
+                                        if (_0xf943x2 <= 1 || _0xf943x3 <= 1 || _0xf943x4 <= 1 || _0xf943x5 <= 1 || _0xf943x6 <= 1 || _0xf943x7 <= 1) {
+                                            document[_0x72d8[2]](_0x72d8[12])[_0x72d8[11]] = _0x72d8[13]
+                                        } else {
+                                            var _0xf943xb = (Number(_0xf943x5) + Number(_0xf943x6) + Number(_0xf943x7)) / 3;
+                                            var _0xf943xc = (Number(_0xf943x2) + Number(_0xf943x3) + Number(_0xf943x4) + _0xf943xb + Number(_0xf943x9)) / 4;
+                                            var _0xf943xd = _0xf943xc * 0.7 + Number(_0xf943x8) * 0.3 + Number(_0xf943xa);
+                                            var _0xf943xe = _0xf943xd[_0x72d8[14]](2);
+                                            var _0xf943xf = 5 - _0xf943xe;
+                                            var _0xf943x10 = _0xf943xf[_0x72d8[14]](2);
+                                            document[_0x72d8[2]](_0x72d8[12])[_0x72d8[11]] = _0x72d8[15] + _0xf943xe;
+                                            if (_0xf943xe < 5) {
+                                                document[_0x72d8[2]](_0x72d8[16])[_0x72d8[11]] = _0x72d8[17] + _0xf943x10 + _0x72d8[18]
+                                            } else {
+                                                document[_0x72d8[2]](_0x72d8[16])[_0x72d8[11]] = _0x72d8[19]
+                                            }
+                                        }
+                                    }
+
+                                </script>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- kết thúc tính xuôi -->
+                <!-- bắt đầu tính ngược -->
+                <div class="modal fade" id="tinhnguoc0" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal"></button>
+                                <h4 class="modal-title">Kết quả</h4>
+                            </div>
+                            <div class="modal-body">
+                                <span id="tinhnguoc"></span>
+                                <script type="text/javascript">
+                                    var _0x76ce = ["\x76\x61\x6C\x75\x65", "\x64\x69\x65\x6D\x74\x62\x6E", "\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64", "\x64\x69\x65\x6D\x6B\x6B\x6E", "\x64\x69\x65\x6D\x75\x74\x6E", "\x74\x6F\x46\x69\x78\x65\x64", "\x69\x6E\x6E\x65\x72\x48\x54\x4D\x4C", "\x74\x69\x6E\x68\x6E\x67\x75\x6F\x63", "\u0110\x69\u1EC3\x6D\x20\x74\u1ED5\x6E\x67\x20\x34\x20\x6D\xF4\x6E\x20\x54\x6F\xE1\x6E\x20\x2B\x20\x56\u0103\x6E\x20\x2B\x20\x41\x6E\x68\x20\x2B\x20\x54\x72\x75\x6E\x67\x20\x62\xEC\x6E\x68\x20\x62\xE0\x69\x20\x74\x68\x69\x20\x74\u1ED5\x20\x68\u1EE3\x70\x20\x6C\xE0\x20", "\x3C\x62\x72\x2F\x3E\x54\u1EE9\x63\x20\x6C\xE0\x20\x6D\u1ED7\x69\x20\x6D\xF4\x6E\x20\x70\x68\u1EA3\x69\x20\x74\x72\xEA\x6E\x20\x31\x20\x76\xE0\x20\x74\x72\x75\x6E\x67\x20\x62\xEC\x6E\x68\x20\x6D\u1ED9\x74\x20\x6D\xF4\x6E\x20\x3E\x3D\x20", "\x20\u0111\u1EC3\x20\u0111\u1ED7\x20\x74\u1ED1\x74\x20\x6E\x67\x68\x69\u1EC7\x70\x21"];
+                                    function tinhnguocc() {
+                                        var _0x731bx2 = document[_0x76ce[2]](_0x76ce[1])[_0x76ce[0]];
+                                        var _0x731bx3 = document[_0x76ce[2]](_0x76ce[3])[_0x76ce[0]];
+                                        var _0x731bx4 = document[_0x76ce[2]](_0x76ce[4])[_0x76ce[0]];
+                                        var _0x731bx5 = ((5 - Number(_0x731bx4) - Number(_0x731bx2) * 0.3) / 0.7) * 4 - Number(_0x731bx3);
+                                        var _0x731bx6 = _0x731bx5[_0x76ce[5]](2);
+                                        var _0x731bx7 = _0x731bx6 / 4;
+                                        var _0x731bx8 = _0x731bx7[_0x76ce[5]](2);
+                                        document[_0x76ce[2]](_0x76ce[7])[_0x76ce[6]] = _0x76ce[8] + _0x731bx6 + _0x76ce[9] + _0x731bx8 + _0x76ce[10]
+                                    }
+                                </script>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- kết thúc tính ngược -->
+                <!-- bắt đầu tính xuôi gdtx -->
+                <div class="modal fade" id="tinhxuoi0gdtx" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal"></button>
+                                <h4 class="modal-title">Kết quả</h4>
+                            </div>
+                            <div class="modal-body">
+                                <span id="tinhxuoigdtx"></span>
+                                <br /><span id="tinhxuoi2gdtx"></span>
+                                <script type="text/javascript">
+                                    var _0x5cb6 = ["\x76\x61\x6C\x75\x65", "\x64\x69\x65\x6D\x74\x6F\x61\x6E\x67\x64\x74\x78", "\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64", "\x64\x69\x65\x6D\x76\x61\x6E\x67\x64\x74\x78", "\x64\x69\x65\x6D\x61\x6E\x68\x67\x64\x74\x78", "\x64\x69\x65\x6D\x74\x62\x67\x64\x74\x78", "\x64\x69\x65\x6D\x6B\x6B\x67\x64\x74\x78", "\x64\x69\x65\x6D\x75\x74\x67\x64\x74\x78", "\x69\x6E\x6E\x65\x72\x48\x54\x4D\x4C", "\x74\x69\x6E\x68\x78\x75\x6F\x69\x67\x64\x74\x78", "\x42\u1EA1\x6E\x20\u0111\xE3\x20\x74\x72\u01B0\u1EE3\x74\x20\x74\u1ED1\x74\x20\x6E\x67\x68\x69\u1EC7\x70\x20\x64\x6F\x20\x63\xF3\x20\x31\x20\x6D\xF4\x6E\x20\x64\u01B0\u1EDB\x69\x20\x68\x6F\u1EB7\x63\x20\x62\u1EB1\x6E\x67\x20\x31\x21", "\x74\x6F\x46\x69\x78\x65\x64", "\u0110\x69\u1EC3\x6D\x20\x78\xE9\x74\x20\x74\u1ED1\x74\x20\x6E\x67\x68\x69\u1EC7\x70\x20\x63\u1EE7\x61\x20\x62\u1EA1\x6E\x20\x6C\xE0\x3A\x20", "\x74\x69\x6E\x68\x78\x75\x6F\x69\x32\x67\x64\x74\x78", "\x42\u1EA1\x6E\x20\u0111\xE3\x20\x74\x72\u01B0\u1EE3\x74\x20\x74\u1ED1\x74\x20\x6E\x67\x68\x69\u1EC7\x70\x21\x3C\x62\x72\x2F\x3E\x42\u1EA1\x6E\x20\x63\u1EA7\x6E\x20\xED\x74\x20\x6E\x68\u1EA5\x74\x20", "\x20\u0111\x69\u1EC3\x6D\x20\x6E\u1EEF\x61\x20\u0111\u1EC3\x20\u0111\u1ED7\x20\x74\u1ED1\x74\x20\x6E\x67\x68\x69\u1EC7\x70", "\x42\u1EA1\x6E\x20\u0111\xE3\x20\u0111\u1ED7\x20\x74\u1ED1\x74\x20\x6E\x67\x68\x69\u1EC7\x70\x21"];
+                                    function tinhxuoiigdtx() {
+                                        var _0x1f60x2 = document[_0x5cb6[2]](_0x5cb6[1])[_0x5cb6[0]];
+                                        var _0x1f60x3 = document[_0x5cb6[2]](_0x5cb6[3])[_0x5cb6[0]];
+                                        var _0x1f60x4 = document[_0x5cb6[2]](_0x5cb6[4])[_0x5cb6[0]];
+                                        var _0x1f60x5 = document[_0x5cb6[2]](_0x5cb6[5])[_0x5cb6[0]];
+                                        var _0x1f60x6 = document[_0x5cb6[2]](_0x5cb6[6])[_0x5cb6[0]];
+                                        var _0x1f60x7 = document[_0x5cb6[2]](_0x5cb6[7])[_0x5cb6[0]];
+                                        if (_0x1f60x2 <= 1 || _0x1f60x3 <= 1 || _0x1f60x4 <= 1) {
+                                            document[_0x5cb6[2]](_0x5cb6[9])[_0x5cb6[8]] = _0x5cb6[10]
+                                        } else {
+                                            var _0x1f60x8 = ((Number(_0x1f60x2) + Number(_0x1f60x3) + Number(_0x1f60x4)) / 3 + Number(_0x1f60x6) / 4) * 0.7 + Number(_0x1f60x5) * 0.3 + Number(_0x1f60x7);
+                                            var _0x1f60x9 = _0x1f60x8[_0x5cb6[11]](2);
+                                            var _0x1f60xa = 5 - _0x1f60x9;
+                                            var _0x1f60xb = _0x1f60xa[_0x5cb6[11]](2);
+                                            document[_0x5cb6[2]](_0x5cb6[9])[_0x5cb6[8]] = _0x5cb6[12] + _0x1f60x9;
+                                            if (_0x1f60x9 < 5) {
+                                                document[_0x5cb6[2]](_0x5cb6[13])[_0x5cb6[8]] = _0x5cb6[14] + _0x1f60xb + _0x5cb6[15]
+                                            } else {
+                                                document[_0x5cb6[2]](_0x5cb6[13])[_0x5cb6[8]] = _0x5cb6[16]
+                                            }
+                                        }
+                                    }
+                                </script>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- kết thúc tính xuôi gdtx -->
+                <!-- bắt đầu tính ngược gdtx -->
+                <div class="modal fade" id="tinhnguoc0gdtx" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal"></button>
+                                <h4 class="modal-title">Kết quả</h4>
+                            </div>
+                            <div class="modal-body">
+                                <span id="tinhnguocgdtx"></span>
+                                <script type="text/javascript">
+                                    var _0xbe1e = ["\x76\x61\x6C\x75\x65", "\x64\x69\x65\x6D\x74\x62\x6E\x67\x64\x74\x78", "\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64", "\x64\x69\x65\x6D\x6B\x6B\x6E\x67\x64\x74\x78", "\x64\x69\x65\x6D\x75\x74\x6E\x67\x64\x74\x78", "\x74\x6F\x46\x69\x78\x65\x64", "\x69\x6E\x6E\x65\x72\x48\x54\x4D\x4C", "\x74\x69\x6E\x68\x6E\x67\x75\x6F\x63\x67\x64\x74\x78", "\u0110\x69\u1EC3\x6D\x20\x74\u1ED5\x6E\x67\x20\x33\x20\x62\xE0\x69\x20\x74\x68\x69\x20\x6C\xE0\x20", "\x3C\x62\x72\x2F\x3E\x54\u1EE9\x63\x20\x6C\xE0\x20\x6D\u1ED7\x69\x20\x62\xE0\x69\x20\x74\x68\x69\x20\x70\x68\u1EA3\x69\x20\x74\x72\xEA\x6E\x20\x31\x20\x76\xE0\x20\x74\x72\x75\x6E\x67\x20\x62\xEC\x6E\x68\x20\x6D\u1ED9\x74\x20\x62\xE0\x69\x20\x74\x68\x69\x20\x3E\x3D\x20", "\x20\u0111\u1EC3\x20\u0111\u1ED7\x20\x74\u1ED1\x74\x20\x6E\x67\x68\x69\u1EC7\x70\x21"];
+                                    function tinhnguoccgdtx() {
+                                        var _0xb146x2 = document[_0xbe1e[2]](_0xbe1e[1])[_0xbe1e[0]];
+                                        var _0xb146x3 = document[_0xbe1e[2]](_0xbe1e[3])[_0xbe1e[0]];
+                                        var _0xb146x4 = document[_0xbe1e[2]](_0xbe1e[4])[_0xbe1e[0]];
+                                        var _0xb146x5 = ((5 - Number(_0xb146x4) - Number(_0xb146x2) * 0.3) / 0.7 - Number(_0xb146x3) / 4) * 3;
+                                        var _0xb146x6 = _0xb146x5[_0xbe1e[5]](2);
+                                        var _0xb146x7 = _0xb146x6 / 3;
+                                        var _0xb146x8 = _0xb146x7[_0xbe1e[5]](2);
+                                        document[_0xbe1e[2]](_0xbe1e[7])[_0xbe1e[6]] = _0xbe1e[8] + _0xb146x6 + _0xbe1e[9] + _0xb146x8 + _0xbe1e[10]
+                                    }
+                                </script>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- kết thúc tính ngược gdtx -->
+                <!-- bắt đầu bình luận facebook -->
+                <!-- kết thúc bình luận facebook -->
+            </div>
+            <!-- kết thúc bên phải -->
+        </div>
+    </div>
+    <hr/>
+    <div class="container" style='font-family: "Lobster", cursive;'>
+        <span class="text-muted">
+            <center style="font-size: 50px"">
+                 © 2019 - 2022, from <a href='https://www.facebook.com/congthanh.nhism2809/' target='_blank'>Lê Thánh Tông <i class="fa fa-star-o fa-spin"></i></a> with love.
+            </center>
+        </span>
+    </div>
+    <br/>
+    <!-- kết thúc phần hiển thị -->
+    <!-- comment facebook javascript sdk -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v10.0&appId=281079366408626&autoLogAppEvents=1" nonce="qQusIoyu"></script>
+    <!-- end comment facebook javascript sdk -->
+</body>
+</html>
