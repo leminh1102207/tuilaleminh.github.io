@@ -1,0 +1,186 @@
+<!--
+David Tataryan
+
+This program is a minesweeper game clone with a solver added to it.
+The game can be played without the solver.
+
+To run the game, open the file in your browser and start playing.
+Tested only on Chrome and Mozilla.
+
+Solve button: will attempt to solve the game.
+It will either solve, lose, or get stuck
+
+#Mines button: will let you change the number of mines. (1 <= n <= 100 ).
+It will start a new game after change.
+
+New game button: will end current game, randomize the board for a new game.
+-->
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SweeperSolver</title>
+  <link rel="stylesheet" href="foundation-6/css/foundation.css" />
+  <link rel="stylesheet" href="mine-finder.css" />
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  <script src="modernizr.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+</head>
+<body id="body" class="bright_screen" onload="newGame()">
+  <br/>
+  <div class="row">
+    <div class="small-6 text-center small-centered columns">
+      <h1 id="game_title" class="bold" onclick="changeScreen();">Mine Finder</h1>
+    </div>
+  </div>
+  <div class="row align-center" >
+    <div class="small-4  column">
+      <label class="bold">Flags: </label>
+      <input TYPE="text" ID="theflags" NAME="flags" SIZE="6" readonly onContextMenu="return false;"/>
+    </div>
+    <div class="small-4  column">
+      <label class="bold">Time: </label>
+      <input TYPE="text" ID="thetime"  NAME="time"  SIZE="6" VALUE="" readonly onContextMenu="return false;">
+    </div>
+  </div>
+  <div class="row" style="margin-bottom: 40px;">
+    <div class="small-12 medium-6 large-6 centered columns">
+      <table id="board" border="0" cellspacing="0" cellpadding="0">
+      </table>
+    </div>
+    <div class="small-12 medium-6 large-6 centered columns">
+      <form NAME="f" id="form_data">
+        <div class="row">
+          <div class="small-12 medium-12 large-12 columns">
+            <a class="button  expanded" onclick="confirmNewGame();">New Game</a>
+          </div>
+          <div class="small-6 medium-6 large-6 columns">
+            <a class="button  alert expanded" onclick="change_num_mines();" data-open="change_mines"># Mines</a>
+            <div class="reveal" id="change_mines" data-reveal style="padding:100px 0">
+              <form id="myform" data-abide novalidate="">
+                <div class="row">
+                  <div class="small-8 small-centered columns">
+                    <label><h4 id = "mines_number_suggestion">Number of Mines</h4>
+                      <input id="change_mines_input" type="text" placeholder="" required pattern="number">
+                      <span class="form-error">
+                        Must input number
+                      </span>
+                    </label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="small-8 small-centered columns">
+                    <div class="row">
+                      <div class="small-6 columns">
+                        <button id="change_button_cancel" data-close class="button expanded secondary" type="button">Cancel</button>
+                      </div>
+                      <div class="small-6 columns">
+                        <a onclick="$('#change_mines').foundation('close'); change_mines_with_input();" class="button expanded" >Done</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              <button class="close-button" data-close aria-label="Close modal" type="button">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+          </div>
+          <div class="small-6 medium-6 large-6 columns">
+            <a class="button  success expanded" onclick="solve();">Solve</a>
+          </div>
+          <div class="small-6 medium-6 large-6 columns">
+            <a class="button  warning expanded" data-open="change_size" onclick="$( '#size_chosen' ).focus();">Change Grid</a>
+            <div class="reveal" id="change_size" data-reveal style="padding:100px 0">
+              <form id="myform2" data-abide novalidate="">
+                <div class="row">
+                  <div class="small-8 small-centered columns">
+                    <label><h4>Grid Size</h4>
+                      <select id="size_chosen" required>
+                        <option value="9" selected="selected" id="grid_9">9x9</option>
+                        <option value="16" id="grid_16">16x16</option>
+                      </select>
+                    </label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="small-8 small-centered columns">
+                    <div class="row">
+                      <div class="small-6 columns">
+                        <button id="change_button_cancel" data-close class="button expanded secondary" type="button">Cancel</button>
+                      </div>
+                      <div class="small-6 columns">
+                        <a onclick="$('#change_size').foundation('close'); changeBoardSize();" class="button expanded" >Done</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              <button class="close-button" data-close aria-label="Close modal" type="button">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+          </div>
+          <div class="small-6 medium-6 large-6 columns">
+            <a class="button  secondary expanded" onclick="showTopScore();" data-open="show_time">My Best Time</a>
+            <div class="reveal" id="show_time" data-reveal style="padding:100px 0">
+              <form id="myform3" data-abide novalidate="">
+                <div class="row">
+                  <div class="small-8 small-centered columns">
+                    <label><h4 id="best_time_display"></h4></label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="small-8 small-centered columns">
+                    <a onclick="$('#show_time').foundation('close');" class="button expanded" >Done</a>
+                  </div>
+                </div>
+              </form>
+              <button class="close-button" data-close aria-label="Close modal" type="button">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="reveal" id="game_over_modal" class="" data-reveal style="padding:50px 0">
+    <div class="row">
+      <div class="small-12 columns text-center">
+        <label><h1 id="game_over_span"></h1></label>
+      </div>
+    </div>
+    <br/>
+    <div class="row" style="padding-top:50px">
+      <div class="small-12 columns">
+        <a class="button expanded" data-close>Close</a>
+      </div>
+    </div>
+
+
+    <button class="close-button" data-close aria-label="Close modal" type="button">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+
+
+  <script src="control.js"></script>
+  <script src="Solver.js"></script>
+  <script>
+
+  maketable();
+
+  </script>
+  <script src="foundation-6/js/vendor/jquery.min.js"></script>
+  <script src="foundation-6/js/vendor/what-input.min.js"></script>
+  <script src="foundation-6/js/foundation.min.js"></script>
+  <script>
+  $(document).foundation();
+  </script>
+</body>
+</html>

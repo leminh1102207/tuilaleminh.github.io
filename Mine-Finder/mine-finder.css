@@ -1,0 +1,47 @@
+table tbody td {
+    padding: 0px !important;
+}
+
+body {
+  line-height: 0px
+}
+
+#game_title:hover {
+	cursor: pointer !important;
+}
+
+.dark_screen{
+	background-color: black;
+}
+
+.bright_screen{
+	background-color: white;
+}
+
+.white{
+	color: white;
+}
+
+.black{
+	color: black;
+}
+
+.bold{
+	font-weight: bold;
+}
+
+.bet_success{
+	background-color: lightgreen;
+}
+
+.bet_fail{
+	background-color: lightpink;
+}
+
+.dark_fail{
+  background-color: #380303;
+}
+
+.dark_success{
+  background-color: #014a01;
+}
