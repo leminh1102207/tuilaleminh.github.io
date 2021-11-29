@@ -1,6 +1,6 @@
 // Thay đổi ngày bắt đầu đếm tại đây - cấu trúc => YYYY/MM/DD
 //const yourDate = new Date("2021-05-25T00:00:00"),
-var a= prompt("ngày 2 bạn quen nhau :3\nexample : 2021-05-25T00:00:00")
+var a= prompt("ngày 2 bạn quen nhau :3\nexample : 2021-05-25") + "T00:00:00";
 var boy = prompt("nhập tên bạn nam");
 var girl = prompt("nhập tên bạn nữ");
 const yourDate = new Date(a),
