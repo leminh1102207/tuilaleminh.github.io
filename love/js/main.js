@@ -1,8 +1,8 @@
 // Thay đổi ngày bắt đầu đếm tại đây - cấu trúc => YYYY/MM/DD
 //const yourDate = new Date("2021-05-25T00:00:00"),
-var a= prompt("ngày 2 bạn quen nhau :3\nexample : 2021-05-25")
-var boy = prompt("nhập tên bạn nam");
-var girl = prompt("nhập tên bạn nữ");
+var a= prompt("Ngày 2 Bạn Quen Nhau :3\nexample : 2021-05-25T00:00:00")
+var boy = prompt("Nhập Tên Bạn Nam");
+var girl = prompt("Nhập Tên Bạn Nữ");
 const yourDate = new Date(a),
     // Thay đổi bài hát tại đây
     music = ['ido', 'noinaycoanh', 'nguoiamphu', 'duong-toi-cho-em-ve-lofi-ver-buitruonglinh-x-freak-d', 'gap-go-yeu-duong-va-duoc-ben-em', 'nam-doi-ban-tay-kay-tran-official-music-video', 'nhung-ban-lofi-freak-d-mix-ver-1.0', 'the-playah-ballad-soobin-hoang-son-ft-slimv-special-version-1-hour'];
